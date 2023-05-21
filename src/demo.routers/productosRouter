@@ -1,0 +1,30 @@
+const express = require('express')
+
+const productos = require('../dato/productos.json')
+const tipo = require('../dato/tipoProductos.json')
+const { productosAll, productosByID, eliminarProducto, modificarProducto, InsertarProducto } = require('../demo.controllers/productoController')
+
+const produRouter = express.Router()
+
+
+produRouter.get('/', productosAll)
+
+
+produRouter.get('/:id', productosByID)
+
+
+
+produRouter.delete('/:id', eliminarProducto)
+
+
+
+produRouter.post('/', InsertarProducto)
+
+
+produRouter.put('/:id', modificarProducto)
+
+
+
+
+
+module.exports = produRouter

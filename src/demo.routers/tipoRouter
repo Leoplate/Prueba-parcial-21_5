@@ -1,0 +1,20 @@
+const express = require('express')
+
+const tipo = require('../dato/tipoProductos.json')
+const { tipoAll } = require('../demo.controllers/tipoController')
+
+const rutaTipo = express.Router()
+
+
+
+rutaTipo.use('/', tipoAll )
+
+
+
+
+
+
+
+
+
+module.exports = rutaTipo, tipo
